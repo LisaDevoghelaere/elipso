@@ -1,0 +1,42 @@
+body
+{
+    margin : 0 auto;
+}
+:root
+{
+    /*Couleurs*/
+    --font-color : #554D89;
+    --bg-degrade : linear-gradient(31deg, rgba(104,82,237,1) 0%, rgba(186,67,252,1) 100%);
+}
+ header nav
+{
+    display: flex;
+    justify-content: start;
+    align-content: center;
+}
+header nav p
+{
+    margin : 0;
+    padding: 0.5rem;
+}
+ul
+{
+    list-style: none;
+    display : flex;
+    justify-content: space-between;
+    align-content: center;
+    margin : 0;
+}
+li
+{
+    padding-right: 1rem;
+    padding-top: 1rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+li:hover
+{
+    color : var(--font-color);
+    font-weight: 700;
+}
