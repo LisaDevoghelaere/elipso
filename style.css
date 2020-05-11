@@ -10,7 +10,7 @@ body
     --bg-degrade : linear-gradient(30deg, rgba(104,82,237,1) 0%, rgba(186,67,252,1) 100%);
 
 }
-h1, h2
+h1
 {
    font-family: 'Poppins';
    font-size: 3.125rem; 
@@ -40,7 +40,7 @@ a
     text-decoration: none; 
     
 }
-ul
+nav ul
 {
     list-style: none;
     display : flex;
@@ -48,25 +48,25 @@ ul
     align-content: center;
     margin : 0;
 }
-li 
+nav ul li 
 {
     padding-right: 1rem;
     padding-top: 1.5rem;
     
 }
-li a
+nav ul li a
 {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     color : var(--text-color-grey);
 }
-li a:hover /*seulement pour les ordinateurs (pas de survol au tactile)*/
+nav ul li a:hover /*seulement pour les ordinateurs (pas de survol au tactile)*/
 {
     color : var(--font-color-purple);
     font-weight: 700;
 }
-li:hover
+nav ul li:hover
 {
     border-top: 0.1rem solid; /*penser à rajouter un dégradé*/
 }
@@ -77,8 +77,8 @@ li:hover
 #container /*ordi*/
 {
     background-image: url(media/shape.png);
-    background-position : left 160% top 55%;
-    background-size: 80%;
+    background-position : left 120% top 90%;
+    background-size: 70%;
     background-repeat: no-repeat;
     width : 1440px;
     margin : auto;   
