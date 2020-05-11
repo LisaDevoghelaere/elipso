@@ -9,6 +9,20 @@ body
     --text-color-grey : #5B5766;
     --bg-degrade : linear-gradient(30deg, rgba(104,82,237,1) 0%, rgba(186,67,252,1) 100%);
 }
+h1, h2
+{
+   font-family: 'Poppins';
+   font-size: 3.125rem; 
+   font-weight : 700;
+   color : var(--font-color-purple);
+   margin-bottom: 1rem;
+}
+.corps-de-texte
+{
+    font-family: 'Nunito', sans-serif;
+    font-size : 1.375rem;
+    color : var(--text-color-grey);
+}
  header nav
 {
     display: flex;
@@ -59,11 +73,31 @@ li:hover
 {
     display: none;
 }
-#container
+#container /*ordi*/
 {
     background-image: url(media/shape.png);
-    background-position : left 50% top 50%;
-    width : 1280px;
-    margin : auto;
-    
+    background-position : left 160% top 55%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    width : 1440px;
+    margin : auto;   
+}
+.en-tete>div
+{
+    width: 25%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 20%; /*Attention à revoir*/
+}
+.en-tete
+{/*Attention à revoir*/
+    width : 100%;
+    height : 90%vw;
+}
+.choix
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
 }
