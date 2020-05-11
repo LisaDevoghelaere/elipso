@@ -8,6 +8,7 @@ body
     --font-color-purple : #554D89;
     --text-color-grey : #5B5766;
     --bg-degrade : linear-gradient(30deg, rgba(104,82,237,1) 0%, rgba(186,67,252,1) 100%);
+
 }
 h1, h2
 {
@@ -89,15 +90,26 @@ li:hover
     margin-left: 10%;
     margin-bottom: 20%; /*Attention à revoir*/
 }
-.en-tete
-{/*Attention à revoir*/
-    width : 100%;
-    height : 90%vw;
-}
 .choix
 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
+}
+.choix p a
+{
+    font-size : 1rem;
+    font-family : 'Poppins', sans-serif;
+    padding : 1rem;
+    border-radius: 30px;
+    color : var(--font-color-purple);
+}
+.choix p a:hover
+{
+    color : white;
+    font-weight: 500;
+    background-image: var(--bg-degrade);
+    padding : 1rem;
+    border-radius: 30px;
 }
