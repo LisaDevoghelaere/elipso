@@ -5,8 +5,9 @@ body
 :root
 {
     /*Couleurs*/
-    --font-color : #554D89;
-    --bg-degrade : linear-gradient(31deg, rgba(104,82,237,1) 0%, rgba(186,67,252,1) 100%);
+    --font-color-purple : #554D89;
+    --text-color-grey : #5B5766;
+    --bg-degrade : linear-gradient(30deg, rgba(104,82,237,1) 0%, rgba(186,67,252,1) 100%);
 }
  header nav
 {
@@ -17,7 +18,12 @@ body
 header nav p
 {
     margin : 0;
-    padding: 0.5rem;
+    padding: 1rem;
+}
+a
+{
+    text-decoration: none; 
+    
 }
 ul
 {
@@ -27,16 +33,37 @@ ul
     align-content: center;
     margin : 0;
 }
-li
+li 
 {
     padding-right: 1rem;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
+    
+}
+li a
+{
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    color : var(--text-color-grey);
+}
+li a:hover /*seulement pour les ordinateurs (pas de survol au tactile)*/
+{
+    color : var(--font-color-purple);
+    font-weight: 700;
 }
 li:hover
 {
-    color : var(--font-color);
-    font-weight: 700;
+    border-top: 0.1rem solid; /*penser à rajouter un dégradé*/
+}
+.appear-responsive /*ordi*/
+{
+    display: none;
+}
+#container
+{
+    background-image: url(media/shape.png);
+    background-position : left 50% top 50%;
+    width : 1280px;
+    margin : auto;
+    
 }
