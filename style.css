@@ -4,6 +4,7 @@
     --font-color-purple : #554D89;
     --font-color-grey : #5B5766;
     --bg-degrade : linear-gradient(30deg, rgba(104,82,237,1) 0%, rgba(186,67,252,1) 100%);
+    --bg-purple : #6852ED;
     /*font weight*/
     --regular : 400;
     --medium : 500;
@@ -42,6 +43,19 @@ a
 ul
 {
     list-style: none;
+}
+.menu li a:hover
+{
+    color : var(--font-color-purple);
+    font-weight: 700;
+    border-top : 0.125rem;
+    border-style : solid;
+    border-image: var(--bg-degrade)100% 0 0 0;
+}
+.material /*-----------------/!\PB Avec Maerial Icons/!\-------------------------*/
+{
+    font-family : 'Material Icons';
+    font-size : 24px;
 }
 h1, .prix
 {
@@ -105,4 +119,36 @@ h3
 .liste-prix
 {
     color : var(--font-color-purple);
+}
+input
+{
+    font-family: 'Nunito', sans-serif;
+    font-size: var(--size22);
+    border: none;
+    padding : 1rem;
+    color: white;
+    background-color: var(--bg-purple);
+}
+button
+{
+    font-size: var(--size22);
+    border: 0.1875rem solid;
+    padding-top : 1rem;
+    padding-bottom : 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: white;
+    border-radius: 40px;
+    border-color: var(--font-color-grey);
+    background-color: var(--bg-purple);
+}
+.titre-footer
+{
+    font-size: var(--size20);
+    font-weight: var(--bold);
+    color : var(--font-color-purple);
+}
+.red-footer
+{
+    color : #EF7171;
 }
