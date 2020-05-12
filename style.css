@@ -51,6 +51,7 @@ ul
     border-top : 0.125rem;
     border-style : solid;
     border-image: var(--bg-degrade)100% 0 0 0;
+    padding-top: 3rem;
 }
 .material /*-----------------/!\PB Avec Maerial Icons/!\-------------------------*/
 {
@@ -110,7 +111,10 @@ h3
     color : #EF7171;
     background-color: #EDEFF4;
     border-radius: 30px;
-    padding : var(--size10);
+    padding-right : 0.3125rem;
+    padding-left : 0.3125rem;
+    padding-top : var(--size10);
+    padding-bottom : var(--size10);
 }
 .per-month
 {
@@ -151,4 +155,42 @@ button
 .red-footer
 {
     color : #EF7171;
+}
+.lower
+{
+    font-size : 0.875rem;
+}
+.lower-bold
+{
+    font-weight: var(--bold);
+}
+.lower-purple
+{
+    color : var(--font-color-purple);
+}
+/*----------------------------------------Flex-BoxSize-Marges------------------------------------*/
+/*-----------Barre Du Haut-------------*/
+header nav
+{
+    display: flex;
+    justify-content: start;
+    align-content: center;
+}
+header nav p
+{
+    margin : 0;
+    padding: 3rem;
+}
+nav ul
+{
+    list-style: none;
+    display : flex;
+    justify-content: space-between;
+    align-content: center;
+    margin : 0;
+}
+nav ul li 
+{
+    padding-right: 1rem;
+    padding-top: 3rem;
 }
