@@ -20,12 +20,14 @@
     --size50 : 3.125rem;
 }
 /*-------------------------------Généralités-------------------------------------*/
+/*---------------Polices, graisses, couleurs,bg-----------------*/
 body
 {
     margin : 0 auto;
     font-family : 'Nunito', sans-serif;
     font-weight: var(--regular);
     font-size : var(--size18);
+    line-height: 1.6875rem;
     color : var(--font-color-grey);
 }
 .poppins
@@ -40,7 +42,6 @@ a
 ul
 {
     list-style: none;
-    padding : 0;
 }
 h1, .prix
 {
@@ -60,18 +61,20 @@ h3
     font-size: var(--size22);
     color : var(--font-color-purple);
 }
-.bouton-degrade
+.bouton-degrade, .bouton-blanc:hover
 {
     color : white;
     font-weight: var(--medium);
     background-image: var(--bg-degrade);
     padding : 1rem;
     border-radius: 30px;
+    font-size: var(--size16);
 }
 .bouton-blanc
 {
     padding : 1rem;
     color : var(--font-color-purple);
+    font-size: var(--size16);
 }
 .intro
 {
@@ -84,5 +87,22 @@ h3
     font-size: var(--size20);
     font-weight: var(--bold);
     line-height : 1.875rem;
+    color : var(--font-color-purple);
+}
+#best-choice
+{
+    font-size: var(--size10);
+    font-weight: var(--bold);
+    color : #EF7171;
+    background-color: #EDEFF4;
+    border-radius: 30px;
+    padding : var(--size10);
+}
+.per-month
+{
+    font-size: var(--size16);
+}
+.liste-prix
+{
     color : var(--font-color-purple);
 }
