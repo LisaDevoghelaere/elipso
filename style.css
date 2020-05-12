@@ -76,12 +76,7 @@ h3
     border-radius: 30px;
     font-size: var(--size16);
 }
-.bouton-blanc
-{
-    padding : 1rem;
-    color : var(--font-color-purple);
-    font-size: var(--size16);
-}
+
 .intro
 {
     font-size: var(--size22);
@@ -164,6 +159,12 @@ button
 
 @media screen and (min-width : 992px)/*9 pouces*/
 {
+    #container /*ordi*/
+    {
+        max-width : 1280px;
+        margin : auto;   
+    }
+
     /*-----------Barre Du Haut-------------*/
         header nav
     {
@@ -199,6 +200,12 @@ button
         border-image: var(--bg-degrade)100% 0 0 0;
         padding-top: 3rem;
     }
+    .bouton-blanc
+    {
+        padding : 1rem;
+        color : var(--font-color-purple);
+        font-size: var(--size16);
+    }
     .bouton-blanc:hover
     {
         color : white;
@@ -216,10 +223,32 @@ button
     {
         display: none;
     }
+    /*----------------------Our Price-------------------------*/
+    .en-tete>div
+    {
+        width: 25%;
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-bottom: 20%; /*Attention à revoir*/
+    }
+    .choix
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
 
 }
 @media screen and (min-width: 480px) and (max-width : 991px)
 {
+    #container /*ordi*/
+    {
+        max-width : 991px;
+        margin : auto;   
+    }
+
     /*-----------Barre Du Haut-------------*/
     .disappear-responsive
     {
@@ -236,7 +265,30 @@ button
         margin : 0;
         padding: 1rem;
     }
-
+    /*----------------------Our Price-------------------------*/
+        .en-tete>div
+    {
+        width: 50%;
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-bottom: 20%; /*Attention à revoir*/
+    }
+    .choix
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .bouton-blanc
+    {
+        color : white;
+        font-weight: var(--medium);
+        background-image: var(--bg-degrade);
+        padding : 1rem;
+        border-radius: 30px;
+        font-size: var(--size16); 
+    }
 }
 @media screen and (max-width: 479px)
 {
@@ -255,5 +307,26 @@ button
     {
         margin : 0;
         padding: 1rem;
+    }
+    /*----------------------Our Price-------------------------*/
+    .en-tete>div
+    {
+        width: 80%;
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-bottom: 20%; /*Attention à revoir*/
+    }
+    .choix
+    {
+        line-height: 3;
+    }
+      .bouton-blanc
+    {
+        color : white;
+        font-weight: var(--medium);
+        background-image: var(--bg-degrade);
+        padding : 1rem;
+        border-radius: 30px;
+        font-size: var(--size16); 
     }
 }
