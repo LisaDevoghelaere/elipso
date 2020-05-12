@@ -1,115 +1,88 @@
-body
-{
-    margin : 0 auto;
-}
 :root
 {
     /*Couleurs*/
     --font-color-purple : #554D89;
-    --text-color-grey : #5B5766;
+    --font-color-grey : #5B5766;
     --bg-degrade : linear-gradient(30deg, rgba(104,82,237,1) 0%, rgba(186,67,252,1) 100%);
-
+    /*font weight*/
+    --regular : 400;
+    --medium : 500;
+    --bold : 700;
+    /*font-size*/
+    --size10 : 0.625rem;
+    --size15 : 0.9375rem;
+    --size16 : 1rem;
+    --size17 : 1.0625rem;
+    --size18 : 1.125rem;
+    --size20 : 1.25rem;
+    --size22 : 1.375rem;
+    --size34 : 2.125rem;
+    --size50 : 3.125rem;
 }
-h1
+/*-------------------------------Généralités-------------------------------------*/
+body
 {
-   font-family: 'Poppins';
-   font-size: 3.125rem; 
-   font-weight : 700;
-   color : var(--font-color-purple);
-   margin-bottom: 1rem;
+    margin : 0 auto;
+    font-family : 'Nunito', sans-serif;
+    font-weight: var(--regular);
+    font-size : var(--size18);
+    color : var(--font-color-grey);
 }
-.corps-de-texte
+.poppins
 {
-    font-family: 'Nunito', sans-serif;
-    font-size : 1.375rem;
-    color : var(--text-color-grey);
-}
- header nav
-{
-    display: flex;
-    justify-content: start;
-    align-content: center;
-}
-header nav p
-{
-    margin : 0;
-    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
 }
 a
 {
-    text-decoration: none; 
-    
+    text-decoration: none;
+    color : var(--font-color-grey);
 }
-nav ul
+ul
 {
     list-style: none;
-    display : flex;
-    justify-content: space-between;
-    align-content: center;
-    margin : 0;
+    padding : 0;
 }
-nav ul li 
+h1, .prix
 {
-    padding-right: 1rem;
-    padding-top: 1.5rem;
-    
-}
-nav ul li a
-{
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    color : var(--text-color-grey);
-}
-nav ul li a:hover /*seulement pour les ordinateurs (pas de survol au tactile)*/
-{
-    color : var(--font-color-purple);
-    font-weight: 700;
-}
-nav ul li:hover
-{
-    border-top: 0.1rem solid; /*penser à rajouter un dégradé*/
-}
-.appear-responsive /*ordi*/
-{
-    display: none;
-}
-#container /*ordi*/
-{
-    background-image: url(media/shape.png);
-    background-position : left 120% top 90%;
-    background-size: 70%;
-    background-repeat: no-repeat;
-    width : 1440px;
-    margin : auto;   
-}
-.en-tete>div
-{
-    width: 25%;
-    margin-top: 10%;
-    margin-left: 10%;
-    margin-bottom: 20%; /*Attention à revoir*/
-}
-.choix
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-}
-.choix p a
-{
-    font-size : 1rem;
-    font-family : 'Poppins', sans-serif;
-    padding : 1rem;
-    border-radius: 30px;
+    font-weight: var(--bold);
+    font-size: var(--size50);
     color : var(--font-color-purple);
 }
-.choix p a:hover
+h2
+{
+    font-weight: var(--bold);
+    font-size: var(--size34);
+    color : var(--font-color-purple);
+}
+h3
+{
+    font-weight: var(--bold);
+    font-size: var(--size22);
+    color : var(--font-color-purple);
+}
+.bouton-degrade
 {
     color : white;
-    font-weight: 500;
+    font-weight: var(--medium);
     background-image: var(--bg-degrade);
     padding : 1rem;
     border-radius: 30px;
+}
+.bouton-blanc
+{
+    padding : 1rem;
+    color : var(--font-color-purple);
+}
+.intro
+{
+    font-size: var(--size22);
+    font-weight: var(--regular);
+    line-height: 2.0625rem;
+}
+.nom-formule
+{
+    font-size: var(--size20);
+    font-weight: var(--bold);
+    line-height : 1.875rem;
+    color : var(--font-color-purple);
 }
