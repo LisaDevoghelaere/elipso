@@ -44,15 +44,6 @@ ul
 {
     list-style: none;
 }
-.menu li a:hover
-{
-    color : var(--font-color-purple);
-    font-weight: 700;
-    border-top : 0.125rem;
-    border-style : solid;
-    border-image: var(--bg-degrade)100% 0 0 0;
-    padding-top: 3rem;
-}
 .material /*-----------------/!\PB Avec Maerial Icons/!\-------------------------*/
 {
     font-family : 'Material Icons';
@@ -76,7 +67,7 @@ h3
     font-size: var(--size22);
     color : var(--font-color-purple);
 }
-.bouton-degrade, .bouton-blanc:hover
+.bouton-degrade
 {
     color : white;
     font-weight: var(--medium);
@@ -169,28 +160,100 @@ button
     color : var(--font-color-purple);
 }
 /*----------------------------------------Flex-BoxSize-Marges------------------------------------*/
-/*-----------Barre Du Haut-------------*/
-header nav
+
+
+@media screen and (min-width : 992px)/*9 pouces*/
 {
-    display: flex;
-    justify-content: start;
-    align-content: center;
+    /*-----------Barre Du Haut-------------*/
+        header nav
+    {
+        display: flex;
+        justify-content: start;
+        align-content: center;
+    }
+    
+    header nav p
+    {
+        margin : 0;
+        padding: 3rem;
+    }
+    nav ul
+    {
+        list-style: none;
+        display : flex;
+        justify-content: space-between;
+        align-content: center;
+        margin : 0;
+    }
+    nav ul li 
+    {
+        padding-right: 1rem;
+        padding-top: 3rem;
+    }
+    .menu li a:hover
+    {
+        color : var(--font-color-purple);
+        font-weight: 700;
+        border-top : 0.125rem;
+        border-style : solid;
+        border-image: var(--bg-degrade)100% 0 0 0;
+        padding-top: 3rem;
+    }
+    .bouton-blanc:hover
+    {
+        color : white;
+        font-weight: var(--medium);
+        background-image: var(--bg-degrade);
+        padding : 1rem;
+        border-radius: 30px;
+        font-size: var(--size16);
+    }
+    button
+    {
+        cursor: pointer;
+    }
+    .appear-responsive
+    {
+        display: none;
+    }
+
 }
-header nav p
+@media screen and (min-width: 480px) and (max-width : 991px)
 {
-    margin : 0;
-    padding: 3rem;
+    /*-----------Barre Du Haut-------------*/
+    .disappear-responsive
+    {
+        display: none;
+    }
+    header nav
+    {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+    header nav p
+    {
+        margin : 0;
+        padding: 1rem;
+    }
+
 }
-nav ul
+@media screen and (max-width: 479px)
 {
-    list-style: none;
-    display : flex;
-    justify-content: space-between;
-    align-content: center;
-    margin : 0;
-}
-nav ul li 
-{
-    padding-right: 1rem;
-    padding-top: 3rem;
+    /*-----------Barre Du Haut-------------*/
+    .disappear-responsive
+    {
+        display: none;
+    }
+    header nav
+    {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+    header nav p
+    {
+        margin : 0;
+        padding: 1rem;
+    }
 }
