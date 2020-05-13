@@ -155,7 +155,11 @@ button
     color : var(--font-color-purple);
 }
 /*----------------------------------------Flex-BoxSize-Marges------------------------------------*/
-
+.formule>div
+{
+    width : 22.5rem;
+    height : 38.5rem;
+}
 
 @media screen and (min-width : 992px)/*9 pouces*/
 {
@@ -292,6 +296,11 @@ button
 }
 @media screen and (max-width: 479px)
 {
+    #container /*ordi*/
+    {
+        max-width : 479px;
+        margin : auto;   
+    }
     /*-----------Barre Du Haut-------------*/
     .disappear-responsive
     {
