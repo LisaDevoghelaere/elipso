@@ -96,11 +96,14 @@ h3
     font-weight: var(--bold);
     color : #EF7171;
     background-color: #EDEFF4;
-    border-radius: 30px;
-    padding-right : 0.3125rem;
-    padding-left : 0.3125rem;
-    padding-top : var(--size10);
-    padding-bottom : var(--size10);
+    border-radius: 20px;
+    padding-right : 0.5rem;
+    padding-left : 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    height : var(--size16);
+    line-height: 1.5;
+    margin-top: 5%;
 }
 .per-month
 {
@@ -159,8 +162,23 @@ button
 {
     width : 22.5rem;
     height : 38.5rem;
+    box-shadow: 3px 3px 30px -13px rgba(112,112,112,1);
+    border-radius: 10px;
+    padding : 1rem;
 }
-
+.prix1-flex
+{
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.formule
+{
+    display : flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin : 0;
+}
 @media screen and (min-width : 992px)/*9 pouces*/
 {
     #container /*ordi*/
