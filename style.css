@@ -28,7 +28,6 @@ body
     font-family : 'Nunito', sans-serif;
     font-weight: var(--regular);
     font-size : var(--size18);
-    line-height: 1.6875rem;
     color : var(--font-color-grey);
 }
 .poppins
@@ -72,7 +71,10 @@ h3
     color : white;
     font-weight: var(--medium);
     background-image: var(--bg-degrade);
-    padding : 1rem;
+    padding-top : 1rem;
+    padding-bottom : 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     border-radius: 30px;
     font-size: var(--size16);
 }
@@ -108,10 +110,13 @@ h3
 .per-month
 {
     font-size: var(--size16);
+    margin-top: 0;
 }
-.liste-prix
+.liste-prix>li
 {
     color : var(--font-color-purple);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 input
 {
@@ -134,6 +139,10 @@ button
     border-radius: 40px;
     border-color: var(--font-color-grey);
     background-color: var(--bg-purple);
+}
+aside
+{
+    background-color: var(--bg-purple);   
 }
 .titre-footer
 {
@@ -160,11 +169,12 @@ button
 /*----------------------------------------Flex-BoxSize-Marges------------------------------------*/
 .formule>div
 {
-    width : 22.5rem;
-    height : 38.5rem;
+    width : 18rem;
+    height : 35rem;
     box-shadow: 3px 3px 30px -13px rgba(112,112,112,1);
     border-radius: 10px;
-    padding : 1rem;
+    padding : 1.5rem;
+    margin : 0.5rem;
 }
 .prix1-flex
 {
@@ -172,19 +182,32 @@ button
     justify-content: space-between;
     align-content: center;
 }
-.formule
+
+.prix
 {
-    display : flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin : 0;
+    border-top : 2px solid;
+    border-color: #BA43FC;
+    padding-top: 2rem;
+    margin-bottom : 0;
+    margin-top: 0.5rem;
+    width : 40px;
+    
+}
+.getting-started
+{
+    margin-top: 5rem;
+}
+/*-----------------------------------------------Testimonials--------------------------------------------*/
+.testimonials
+{
+    text-align: center;
 }
 @media screen and (min-width : 992px)/*9 pouces*/
 {
     #container /*ordi*/
     {
         max-width : 1280px;
-        margin : auto;   
+        margin :0 auto;   
     }
 
     /*-----------Barre Du Haut-------------*/
@@ -220,11 +243,14 @@ button
         border-top : 0.125rem;
         border-style : solid;
         border-image: var(--bg-degrade)100% 0 0 0;
-        padding-top: 3rem;
+        padding-top: 2.9rem;
     }
     .bouton-blanc
     {
-        padding : 1rem;
+        padding-top : 1rem;
+        padding-bottom : 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         color : var(--font-color-purple);
         font-size: var(--size16);
     }
@@ -233,7 +259,10 @@ button
         color : white;
         font-weight: var(--medium);
         background-image: var(--bg-degrade);
-        padding : 1rem;
+        padding-top : 1rem;
+        padding-bottom : 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         border-radius: 30px;
         font-size: var(--size16);
     }
@@ -248,7 +277,7 @@ button
     /*----------------------Our Price-------------------------*/
     .en-tete>div
     {
-        width: 25%;
+        width: 35%;
         margin-top: 10%;
         margin-left: 10%;
         margin-bottom: 20%; /*Attention à revoir*/
@@ -260,7 +289,20 @@ button
         justify-content: space-between;
         align-content: center;
     }
-
+    /*-----------------------Formule----------------------------*/
+    .formule
+    {
+        display : flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        margin : 0;
+        flex-direction: row;
+    }
+    .formule>div
+    {
+        flex: 28%;
+    }
 
 }
 @media screen and (min-width: 480px) and (max-width : 991px)
@@ -311,6 +353,20 @@ button
         border-radius: 30px;
         font-size: var(--size16); 
     }
+    .formule
+    {
+        display : flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        margin : 0;
+        flex-direction: row;
+    }
+    .formule>div
+    {
+        flex: 25%;
+    }
+
 }
 @media screen and (max-width: 479px)
 {
@@ -355,5 +411,14 @@ button
         padding : 1rem;
         border-radius: 30px;
         font-size: var(--size16); 
+    }
+    .formule
+    {
+        display : flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        margin : 0;
+        flex-direction: column;
     }
 }
