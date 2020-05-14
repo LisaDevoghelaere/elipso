@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Material_Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIcons-Regular'),
+         url(fonts/MaterialIcons-Regular.woff2) format('woff2'),
+         url(fonts/MaterialIcons-Regular.woff) format('woff'),
+         url(fonts/MaterialIcons-Regular.ttf) format('truetype');
+  }
 :root
 {
     /*Couleurs*/
@@ -5,6 +16,7 @@
     --font-color-grey : #5B5766;
     --bg-degrade : linear-gradient(30deg, rgba(104,82,237,1) 0%, rgba(186,67,252,1) 100%);
     --bg-purple : #6852ED;
+    --shadow : 3px 3px 30px -13px rgba(112,112,112,0.3);
     /*font weight*/
     --regular : 400;
     --medium : 500;
@@ -167,11 +179,15 @@ aside
     color : var(--font-color-purple);
 }
 /*----------------------------------------Flex-BoxSize-Marges------------------------------------*/
+.formule
+{
+    margin-bottom : 10%;
+}
 .formule>div
 {
     width : 18rem;
     height : 35rem;
-    box-shadow: 3px 3px 30px -13px rgba(112,112,112,1);
+    box-shadow: var(--shadow);
     border-radius: 10px;
     padding : 1.5rem;
     margin : 0.5rem;
@@ -197,14 +213,87 @@ aside
 {
     margin-top: 5rem;
 }
+.petite-marge
+{
+margin-left : 10%;
+margin-right : 10%;
+}
 /*-----------------------------------------------Testimonials--------------------------------------------*/
 .testimonials
 {
     text-align: center;
+    background-color: #F6F7FA;
+    background-image: url(media/bg-2.png);
+    height : 33.4375rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
+.cercle
+{
+    border-radius:50%;
+    width:5rem;
+    height:5rem;
+    border:none;
+    background-color: var(--bg-purple);
+    display: inline-block;
+}
+/*--------------------------------------------------colones----------------------------------------*/
+.colones
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.colone3
+{
+    margin : 1rem;
+    width : 20.625rem;
+    height : 18.4375rem;
+    align-self: center;
+}
+.colone-cadre
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cadre1
+{
+    box-shadow: var(--shadow);
+    border-radius: 30px;
+    width : 22.5rem;
+    height : 14.3125rem;
+    padding-top: 3rem;
+    padding-left : 1rem;
+    padding-right : 1rem;
+    margin-top : 0.5rem;
+    margin-left: 2rem
+}
+.cadre
+{
+    box-shadow: var(--shadow);
+    border-radius: 30px;
+    width : 22.5rem;
+    height : 14.3125rem;
+    padding-top: 3rem;
+    padding-left : 1rem;
+    padding-right : 1rem;
+    margin-top : 3rem;
+    margin-left: 2rem
+}
+.appear-hover
+{
+    display: none;
+}
+
 @media screen and (min-width : 992px)/*9 pouces*/
 {
-    #container /*ordi*/
+    .container /*ordi*/
     {
         max-width : 1280px;
         margin :0 auto;   
@@ -296,18 +385,28 @@ aside
         justify-content: space-around;
         align-content: center;
         flex-wrap: wrap;
-        margin : 0;
         flex-direction: row;
     }
     .formule>div
     {
         flex: 28%;
     }
-
+    /*--------------------colones------------------------------*/
+    .cadre:hover, .cadre1:hover
+    {
+        background-image: var(--bg-degrade);
+        color : white;
+        font-weight: var(--bold);
+        cursor: pointer;
+    }
+    .appear-hover
+    {
+        display: block;
+    }
 }
 @media screen and (min-width: 480px) and (max-width : 991px)
 {
-    #container /*ordi*/
+    .container /*ordi*/
     {
         max-width : 991px;
         margin : auto;   
@@ -366,11 +465,15 @@ aside
     {
         flex: 25%;
     }
-
+    /*--------------------------colones------------------------*/
+    .appear-hover
+    {
+        display: none;
+    }
 }
 @media screen and (max-width: 479px)
 {
-    #container /*ordi*/
+    .container /*ordi*/
     {
         max-width : 479px;
         margin : auto;   
@@ -420,5 +523,10 @@ aside
         flex-wrap: wrap;
         margin : 0;
         flex-direction: column;
+    }
+    /*--------------------------colones------------------------*/
+    .appear-hover
+    {
+        display: none;
     }
 }
