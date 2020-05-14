@@ -151,6 +151,7 @@ button
     border-radius: 40px;
     border-color: var(--font-color-grey);
     background-color: var(--bg-purple);
+    cursor: pointer;
 }
 aside
 {
@@ -239,7 +240,7 @@ margin-right : 10%;
     background-color: var(--bg-purple);
     display: inline-block;
 }
-/*--------------------------------------------------colones----------------------------------------*/
+/*--------------------------------------------------colones et cadres----------------------------------------*/
 .colones
 {
     display: flex;
@@ -257,10 +258,17 @@ margin-right : 10%;
     height : 18.4375rem;
     align-self: center;
 }
+.colone3 p
+{
+    max-width: 20.625rem;
+    max-height: 18.4375rem;
+}
 .colone-cadre
 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex: 56%;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 .cadre1
 {
@@ -272,7 +280,7 @@ margin-right : 10%;
     padding-left : 1rem;
     padding-right : 1rem;
     margin-top : 0.5rem;
-    margin-left: 2rem
+    margin-left: 1rem;
 }
 .cadre
 {
@@ -284,11 +292,51 @@ margin-right : 10%;
     padding-left : 1rem;
     padding-right : 1rem;
     margin-top : 3rem;
-    margin-left: 2rem
+    margin-left: 1rem;
 }
 .appear-hover
 {
-    display: none;
+    color : rgb(255, 255, 255,0)
+}
+/*-----------------colones & cadres HOVER--------------------*/
+.cadre:hover, .cadre1:hover
+{
+    background-image: var(--bg-degrade);
+    color : white;
+    font-weight: var(--bold);
+    cursor: pointer;
+}
+.cadre1:hover h3, .cadre:hover h3, .cadre:hover .appear-hover, .cadre1:hover .appear-hover
+{
+    color : white;
+    font-weight: var(--bold);
+}
+/*------------------------------------------------Services---------------------------------------------*/
+.image-arrondie
+{
+    border-top-right-radius: 55%;
+    border-bottom-right-radius: 55%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 10%;
+    background-image: url(media/ile.jpg);
+    width : 40.6875rem;
+    height : 29.625rem;
+}
+.services
+{
+    display : flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.services div
+{
+    margin-bottom : 10%;
+}
+.txt-service
+{
+    width : 26rem;
+    height : 29rem;
 }
 
 @media screen and (min-width : 992px)/*9 pouces*/
@@ -342,6 +390,7 @@ margin-right : 10%;
         padding-right: 1.5rem;
         color : var(--font-color-purple);
         font-size: var(--size16);
+        cursor: pointer;
     }
     .bouton-blanc:hover
     {
@@ -359,10 +408,6 @@ margin-right : 10%;
     {
         cursor: pointer;
     }
-    .appear-responsive
-    {
-        display: none;
-    }
     /*----------------------Our Price-------------------------*/
     .en-tete>div
     {
@@ -377,6 +422,7 @@ margin-right : 10%;
         flex-direction: row;
         justify-content: space-between;
         align-content: center;
+    
     }
     /*-----------------------Formule----------------------------*/
     .formule
@@ -391,18 +437,7 @@ margin-right : 10%;
     {
         flex: 28%;
     }
-    /*--------------------colones------------------------------*/
-    .cadre:hover, .cadre1:hover
-    {
-        background-image: var(--bg-degrade);
-        color : white;
-        font-weight: var(--bold);
-        cursor: pointer;
-    }
-    .appear-hover
-    {
-        display: block;
-    }
+    
 }
 @media screen and (min-width: 480px) and (max-width : 991px)
 {
@@ -429,7 +464,7 @@ margin-right : 10%;
         padding: 1rem;
     }
     /*----------------------Our Price-------------------------*/
-        .en-tete>div
+    .en-tete>div
     {
         width: 50%;
         margin-top: 10%;
@@ -452,6 +487,7 @@ margin-right : 10%;
         border-radius: 30px;
         font-size: var(--size16); 
     }
+    /*--------------------------------Formules------------------------------------------*/
     .formule
     {
         display : flex;
@@ -466,10 +502,6 @@ margin-right : 10%;
         flex: 25%;
     }
     /*--------------------------colones------------------------*/
-    .appear-hover
-    {
-        display: none;
-    }
 }
 @media screen and (max-width: 479px)
 {
@@ -525,8 +557,25 @@ margin-right : 10%;
         flex-direction: column;
     }
     /*--------------------------colones------------------------*/
-    .appear-hover
-    {
-        display: none;
-    }
+    .colones
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.cadre, .cadre1
+{
+    box-shadow: var(--shadow);
+    border-radius: 30px;
+    width : 18rem;
+    height : 12rem;
+    padding-top: 3rem;
+    padding-left : 1rem;
+    padding-right : 1rem;
+    margin-top : 1rem;
+}
 }
