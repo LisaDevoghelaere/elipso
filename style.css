@@ -153,10 +153,6 @@ button
     background-color: var(--bg-purple);
     cursor: pointer;
 }
-aside
-{
-    background-color: var(--bg-purple);   
-}
 .titre-footer
 {
     font-size: var(--size20);
@@ -177,7 +173,7 @@ aside
 }
 .lower-purple
 {
-    color : var(--font-color-purple);
+    color : var(--bg-purple);
 }
 /*----------------------------------------Flex-BoxSize-Marges------------------------------------*/
 .formule
@@ -199,7 +195,6 @@ aside
     justify-content: space-between;
     align-content: center;
 }
-
 .prix
 {
     border-top : 2px solid;
@@ -338,7 +333,33 @@ margin-right : 10%;
     width : 26rem;
     height : 29rem;
 }
+/*---------------------------------Newsletter-----------------------------------------*/
+aside
+{
+    background-color: var(--bg-purple); 
+    height : 6.875rem;  
+}
+form
+{
+    padding-top: 1.5%;
+}
+/*------------------------------------------------------FOOTER--------------------------------------------------*/
+.footer-ligne1
+{
+    display : flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.footer-ligne1 div
+{
+    flex : 20%;
+    padding : 2%;
 
+}
+.footer-ligne1 div:last-of-type
+{
+ align-self: center;
+}
 @media screen and (min-width : 992px)/*9 pouces*/
 {
     .container /*ordi*/
