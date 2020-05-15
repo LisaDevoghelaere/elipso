@@ -41,6 +41,10 @@ body
     font-weight: var(--regular);
     font-size : var(--size18);
     color : var(--font-color-grey);
+    background-image: url(media/shape.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 150% -15%;
 }
 .poppins
 {
@@ -59,6 +63,7 @@ ul
 {
     font-family : 'Material Icons';
     font-size : 24px;
+    padding-right: 2rem;
 }
 h1, .prix
 {
@@ -166,6 +171,7 @@ button
 .lower
 {
     font-size : 0.875rem;
+    padding-left: 3%;
 }
 .lower-bold
 {
@@ -175,7 +181,8 @@ button
 {
     color : var(--bg-purple);
 }
-/*----------------------------------------Flex-BoxSize-Marges------------------------------------*/
+
+/*----------------------------------------Formule-----------------------------------*/
 .formule
 {
     margin-bottom : 10%;
@@ -234,6 +241,7 @@ margin-right : 10%;
     border:none;
     background-color: var(--bg-purple);
     display: inline-block;
+    background-image: url(media/crazy.jpg);
 }
 /*--------------------------------------------------colones et cadres----------------------------------------*/
 .colones
@@ -293,24 +301,12 @@ margin-right : 10%;
 {
     color : rgb(255, 255, 255,0)
 }
-/*-----------------colones & cadres HOVER--------------------*/
-.cadre:hover, .cadre1:hover
-{
-    background-image: var(--bg-degrade);
-    color : white;
-    font-weight: var(--bold);
-    cursor: pointer;
-}
-.cadre1:hover h3, .cadre:hover h3, .cadre:hover .appear-hover, .cadre1:hover .appear-hover
-{
-    color : white;
-    font-weight: var(--bold);
-}
+
 /*------------------------------------------------Services---------------------------------------------*/
 .image-arrondie
 {
-    border-top-right-radius: 55%;
-    border-bottom-right-radius: 55%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 10%;
     background-image: url(media/ile.jpg);
@@ -349,6 +345,7 @@ form
     display : flex;
     justify-content: space-between;
     align-content: center;
+    flex-wrap: wrap;
 }
 .footer-ligne1 div
 {
@@ -375,7 +372,10 @@ form
         justify-content: start;
         align-content: center;
     }
-    
+    .appear-responsive
+    {
+        display: none;
+    }
     header nav p
     {
         margin : 0;
@@ -458,10 +458,34 @@ form
     {
         flex: 28%;
     }
-    
+    /*-----------------colones & cadres HOVER--------------------*/
+    .cadre:hover, .cadre1:hover
+    {
+        background-image: var(--bg-degrade);
+        color : white;
+        font-weight: var(--bold);
+        cursor: pointer;
+    }
+    .cadre1:hover h3, .cadre:hover h3, .cadre:hover .appear-hover, .cadre1:hover .appear-hover
+    {
+        color : white;
+        font-weight: var(--bold);
+    }
+    /*----------------------------Aside Newsletter-------------------------------*/
+    .smartphone-appear
+    {
+        display : none;
+    }
 }
 @media screen and (min-width: 480px) and (max-width : 991px)
 {
+    body
+    {
+        background-image: url(media/shape.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 140% -5%;
+    }
     .container /*ordi*/
     {
         max-width : 991px;
@@ -472,6 +496,10 @@ form
     .disappear-responsive
     {
         display: none;
+    }
+    .material
+    {
+        color: white;
     }
     header nav
     {
@@ -495,7 +523,7 @@ form
     .choix
     {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         align-content: center;
     }
@@ -522,7 +550,43 @@ form
     {
         flex: 25%;
     }
-    /*--------------------------colones------------------------*/
+    /*--------------------------colones & cadres------------------------*/
+        .cadre, .cadre1
+    {
+        box-shadow: var(--shadow);
+        border-radius: 30px;
+        width : 18rem;
+        height : 12rem;
+        padding-top: 3rem;
+        padding-left : 1rem;
+        padding-right : 1rem;
+        margin-top : 1rem auto;
+    }
+        .colone-cadre
+    {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        
+    }
+    /*---------------------------------Aside Newsletter--------------------------------*/
+        aside
+    {
+        background-color: var(--bg-purple); 
+        height : 10rem;  
+    }
+    .smartphone-appear
+    {
+        display : none;
+    }
+    /*-----------------------------------------Footer--------------------------------------------*/
+        .footer-ligne1 div
+    {
+        flex : 30%;
+        padding : 2%;
+
+    }
 }
 @media screen and (max-width: 479px)
 {
@@ -592,11 +656,54 @@ form
 {
     box-shadow: var(--shadow);
     border-radius: 30px;
-    width : 18rem;
+    width : 17rem;
     height : 12rem;
     padding-top: 3rem;
     padding-left : 1rem;
     padding-right : 1rem;
-    margin-top : 1rem;
+    margin : auto;
 }
+.colone-cadre
+{
+    margin : auto;
+}
+/*------------------------------------Services---------------------------------------*/
+.image-arrondie
+{
+    border-radius: 0%;
+}
+/*---------------------------------Aside Newsletter--------------------------------*/
+    aside
+    {
+        background-color: var(--bg-purple); 
+        height : 10rem;  
+    }
+    .smartphone-appear
+    {
+        display : block;
+    }
+    /*---------------------------------footer--------------------------------*/
+    .footer-ligne1
+    {
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .footer-ligne1 div
+    {
+        flex : 20%;
+        padding : 2%;
+
+    }
+    .footer-ligne1 div:last-of-type
+    {
+    align-self: start;
+    }
+    .smartphone-disappear
+    {
+        display: none;
+    }
 }
