@@ -356,7 +356,7 @@ form
 {
  align-self: center;
 }
-@media screen and (min-width : 1024px)/*9 pouces*/
+@media screen and (min-width : 992px)/*9 pouces*/
 {
     .container /*ordi*/
     {
@@ -483,20 +483,6 @@ form
         max-width : 1023px;
         margin :0 auto;   
     }
-    /*--------------------------------Formules------------------------------------------*/
-    .formule
-    {
-        display : flex;
-        justify-content: space-around;
-        align-content: center;
-        flex-wrap: wrap;
-        margin : 0;
-        flex-direction: row;
-    }
-    .formule>div
-    {
-        flex: 25%;
-    }
     /*--------------------------colones & cadres------------------------*/
     .cadre, .cadre1
     {
@@ -504,9 +490,10 @@ form
         border-radius: 30px;
         width : 18rem;
         height : 12rem;
-        padding-top: 2.8rem;
+        padding-top: 2.6rem;
         padding-left : 0.8rem;
         padding-right : 0.8rem;
+        padding-bottom: 0.7rem;
         margin-top : 0.5rem;
         margin-left: 1rem;
     }
@@ -556,7 +543,7 @@ form
         font-weight: var(--bold);
     }      
 }
-@media screen and (min-width: 480px) and (max-width : 809px)
+@media screen and (min-width: 480px) and (max-width : 991px)
 {
     body
     {
